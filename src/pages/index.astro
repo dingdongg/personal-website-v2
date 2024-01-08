@@ -1,47 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 
 const introMessage = "Hi! I'm a 4th year student at UBC."
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<meta name="generator" content={Astro.generator} />
-		<title>Donggyu Kim</title>
-	</head>
-	<body class="bg-slate-900 text-white">
-		<div class="flex flex-row-reverse border-b border-slate-500/25 p-6">
-			<a href="/projects" class="mx-6">Projects</a>
-			<a href="/posts" class="ml-6">Posts</a>
-			<a href="/about" class="ml -6">About</a>
-		</div>
-		<h1>Donggyu Kim</h1>
-		<div class="flex justify-center p-4">
-			<div class="mx-6">Email</div>
-			<div class="mx-6">Github</div>
-			<div class="mx-6">Instagram</div>
-			<div class="mx-6">LinkedIn</div>
-			<div class="mx-6">X</div>
-		</div>
-		<br />
-		<p class="text-center">{ introMessage }</p>
-		<br />
-		<div class="flex flex-row-reverse border-t border-slate-500/25 p-6">
-			<p class="mx-6">Email</p>
-			<p class="ml-6">Github</p>
-			<p class="ml-6">Instagram</p>
-			<p class="ml-6">LinkedIn</p>
-			<p class="ml-6">X</p>
-		</div>
-	</body>
-</html>
+<Layout title="Donggyu Kim">
+	<h1>Donggyu Kim</h1>
+	<div class="flex justify-center p-4">
+		<div class="mx-6">Email</div>
+		<div class="mx-6">Github</div>
+		<div class="mx-6">Instagram</div>
+		<div class="mx-6">LinkedIn</div>
+		<div class="mx-6">X</div>
+	</div>
+	<br />
+	<p class="text-center">{ introMessage }</p>
+</Layout>
 
 <style>
 	main {
