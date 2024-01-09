@@ -4,12 +4,20 @@ import GithubIcon from "./icons/GithubIcon.astro";
 import InstagramIcon from "./icons/InstagramIcon.astro";
 import LinkedInIcon from "./icons/LinkedinIcon.astro";
 import TwitterIcon from "./icons/TwitterIcon.astro";
+
+const socialUrls = {
+    email: "mailto:donggyukimm@gmail.com",
+    github: "https://github.com/dingdongg",
+    instagram: "https://instagram.com/ddonggggyu",
+    linkedin: "https://www.linkedin.com/in/donggyukimm/",
+    twitter: "https://twitter.com/lilacorrnn",
+};
 ---
 
 <div class="flex justify-center p-4">
-    <EmailIcon />
-    <GithubIcon />
-    <InstagramIcon />
-    <LinkedInIcon />
-    <TwitterIcon />
+    <EmailIcon link={socialUrls.email} />
+    <GithubIcon link={socialUrls.github} />
+    <InstagramIcon link={socialUrls.instagram} />
+    <LinkedInIcon link={socialUrls.linkedin} />
+    <TwitterIcon link={socialUrls.twitter} />
 </div>
