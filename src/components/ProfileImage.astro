@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
+import profileImage from "../images/headshot.jpg";
+
 const { size } = Astro.props;
 ---
 
 <div class={`bg-slate-900 w-[${size || "250"}px] h-[${size || "250"}px] clip rounded-full overflow-hidden`}>
-    <img src="/headshot.jpg" alt="Headshot" class="object-center" width={size} height="auto">
+    <Image src={profileImage} alt="Profile image" class="object-center" width={size} />
 </div>
