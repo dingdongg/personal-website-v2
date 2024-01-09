@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SocialList from '../components/SocialList.astro';
+import ProfileImage from '../components/ProfileImage.astro';
 
 const introMessage = "Hi! I'm a 4th year student at UBC."
 ---
 
 <Layout title="Donggyu Kim">
-	<div class="h-[100vh]">
+	<div class="h-[100vh] flex flex-col items-center">
+		<ProfileImage size="225" />
 		<h1 class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
 			Donggyu Kim
 		</h1>
