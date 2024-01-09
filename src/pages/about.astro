@@ -1,8 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import ProfileImage from "../components/ProfileImage.astro";
+
+const introMessage = "Hi! I'm Donggyu. I'm a 4th year CS student at UBC.<br> blahblah";
 ---
 
 <Layout title="Donggyu Kim - About">
 	<a href="/">Back</a>
 	<div>abouts page</div>
-</Layout>
+	<ProfileImage/>
+	<Fragment set:html={introMessage} />
+</Layout> 
