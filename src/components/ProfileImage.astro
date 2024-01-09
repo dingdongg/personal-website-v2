@@ -3,8 +3,14 @@ import { Image } from "astro:assets";
 import profileImage from "../images/headshot.jpg";
 
 const { size } = Astro.props;
+const fixedSize = `${size || "200"}px`;
+const classList = [
+    `w-[${fixedSize}] h-[${fixedSize}]`,
+    `min-w-[${fixedSize}] min-h-[${fixedSize}]`,
+    "bg-slate-900 rounded-full select-none overflow-hidden",
+];
 ---
 
-<div class={`bg-slate-900 w-[${size || "250"}px] h-[${size || "250"}px] clip rounded-full overflow-hidden`}>
-    <Image src={profileImage} alt="Profile image" class="object-center" width={size} />
+<div class:list={classList}>
+    <Image src={profileImage} alt="Profile image" class="object-center" width={size || 200} height={size || 200} />
 </div>
