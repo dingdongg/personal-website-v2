@@ -1,0 +1,7 @@
+---
+const { size } = Astro.props;
+---
+
+<div class={`bg-red-300 w-[${size || "250"}px] h-[${size || "250"}px] clip rounded-full overflow-hidden`}>
+    <img src="/headshot.jpg" alt="Headshot" class="object-center" width={size} height="auto">
+</div>
