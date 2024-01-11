@@ -1,0 +1,23 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <h1>{ frontmatter.title }</h1>
+    <p>Written by { frontmatter.author }</p>
+    <slot />
+</Layout>
+
+<style>
+	:root {
+		color-scheme: dark;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+</style>
