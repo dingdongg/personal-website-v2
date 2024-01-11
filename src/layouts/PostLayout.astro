@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-    <a href="/posts">Back</a>
+    <a href="/posts">Go Back</a>
     <h1 class="text-center">{ frontmatter.title }</h1>
     <p>Written by { frontmatter.author } on { frontmatter.pubDate.split("T")[0] }</p>
     <slot />

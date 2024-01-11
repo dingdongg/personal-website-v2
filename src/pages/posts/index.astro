@@ -6,8 +6,8 @@ console.log(posts);
 ---
 
 <Layout title="Donggyu Kim - Posts">
-	<a href="/">Back</a>
-	<div>posts page</div>
+	<a href="/">Go Back</a>
+	<h1>Posts</h1>
     <ul>
         {
             posts.map((post) => (
@@ -19,3 +19,16 @@ console.log(posts);
         }
     </ul>
 </Layout>
+
+<style>
+	:root {
+		color-scheme: dark;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+</style>
