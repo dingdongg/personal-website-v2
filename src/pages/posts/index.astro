@@ -1,8 +1,21 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+
+const posts = await Astro.glob("./*.md");
+console.log(posts);
 ---
 
 <Layout title="Donggyu Kim - Posts">
 	<a href="/">Back</a>
-	<div class="h-[100vh]" >posts page</div>
+	<div>posts page</div>
+    <ul>
+        {
+            posts.map((post) => (
+                <div class="flex justify-between mx-16">
+                    <a href={post.url}>{ post.frontmatter.title }</a>
+                    <p>{ post.frontmatter.pubDate.split("T")[0]}</p>
+                </div>
+            ))
+        }
+    </ul>
 </Layout>
