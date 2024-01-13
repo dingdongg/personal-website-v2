@@ -2,22 +2,28 @@
 import Layout from "../../layouts/Layout.astro"
 
 const posts = await Astro.glob("./*.md");
-console.log(posts);
+const pageDescription = "this is where I do all of my rambling";
+const noPostsMessage = "nothing posted yet. Stay tuned!";
 ---
 
 <Layout title="Donggyu Kim - Posts">
 	<a href="/">Go Back</a>
 	<h1>Posts</h1>
-    <ul>
-        {
-            posts.map((post) => (
-                <div class="flex justify-between mx-16">
-                    <a href={post.url}>{ post.frontmatter.title }</a>
-                    <p>{ post.frontmatter.pubDate.split("T")[0]}</p>
-                </div>
-            ))
-        }
-    </ul>
+	<p class="mb-12 text-center text-xl">{ pageDescription }</p>
+	{
+		posts.length > 0 ? 
+			<ul>
+				{
+					posts.map((post) => (
+						<div class="flex justify-between mx-16 text-xl">
+							<a href={post.url}>{ post.frontmatter.title }</a>
+							<p>{ post.frontmatter.pubDate.split("T")[0]}</p>
+						</div>
+					))
+				}
+			</ul> :
+			<p class="text-center text-xl">{ noPostsMessage }</p>
+	}
 </Layout>
 
 <style>
@@ -29,6 +35,6 @@ console.log(posts);
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-		margin-bottom: 1em;
+		margin-bottom: 0.6em;
 	}
 </style>
