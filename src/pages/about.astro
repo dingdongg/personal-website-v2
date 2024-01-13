@@ -1,13 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ProfileImage from "../components/ProfileImage.astro";
 
 const introMessage = "Hi! I'm Donggyu. I'm a 4th year CS student at UBC.<br> blahblah";
+const pageDescription = "more info about me here!"
+
+const rres = await fetch("http://localhost:4321/current_song");
+const res = await rres.json();
+console.log(res);
 ---
 
 <Layout title="Donggyu Kim - About">
 	<a href="/">Go Back</a>
-	<div>abouts page</div>
-	<ProfileImage/>
-	<Fragment set:html={introMessage} />
+	<div class="flex flex-col items-center">
+		<h1>About me</h1>
+		<p class="mb-12 text-center text-xl">{ pageDescription }</p>
+		<div class="text-wrap text-xl max-w-[650px] mx-5">
+			<p>{ introMessage }</p>
+			<p>
+				Also, I like digging up new music to bump
+				<span class="inline-block animate-bounce">ᕕ(⌐■_■)ᕗ ♪♬</span>
+			</p>
+		</div>
+		{
+			res?.isPlaying ? 
+			<div>
+				Now playing: { res.title } by { res.artist }
+				<img src={res.image?.url} width="200" height="200" alt={`Cover art for ${res.title}`}>
+			</div> :
+			<div>nothing playing rn</div>
+		}
+	</div>
 </Layout> 
+
+<style>
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 0.6em;
+	}
+</style>
