@@ -4,6 +4,7 @@ import SocialList from '../components/SocialList.astro';
 import ProfileImage from '../components/ProfileImage.astro';
 
 const introMessage = "Hi! I'm Donggyu, and I'm in my 4th year as an undergrad CS student. I'm currently learning about distributed systems and game development.";
+const recentActivity = "Right now, I'm creating a program to simulate the shared unit pool from the game Teamfight Tactics.";
 const profileImageSize = 200;
 ---
 
@@ -18,6 +19,8 @@ const profileImageSize = 200;
 		<div class="text-wrap text-xl max-w-[650px] mx-5">
 			<p>{ introMessage }</p>
 			<br/>
+			<p>{ recentActivity }</p>
+			<br />
 			Also, I like digging up new music to bump
 			<span class="inline-block animate-bounce">ᕕ(⌐■_■)ᕗ ♪♬</span>
 		</div>
