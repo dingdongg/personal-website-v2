@@ -3,7 +3,7 @@
 const { post } = Astro.props;
 ---
 
-<li class="mx-16 text-2xl hover:underline">
+<li class="md:mx-16 mx-5 text-2xl hover:underline">
     <a href={post.url} class="flex flex-col hover:underline md:flex-row w-full md:justify-between">
         { post.frontmatter.title }
         <p class="inline mb-5 md:mb-2">{ post.frontmatter.pubDate.split("T")[0]}</p>
