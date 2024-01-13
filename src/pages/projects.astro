@@ -30,7 +30,7 @@ const projects = [
 	<a href="/">Go Back</a>
 	<h1 class="text-center">Projects</h1>
 	<p class="mb-12 text-center text-xl">{ pageDescription }</p>
-	<div class="grid grid-cols-2 grid-rows-3 gap-12 justify-center">
+	<div class="lg:grid grid-cols-2 grid-rows-3 gap-8 justify-center flex flex-col">
 		{projects.map(({ url, title, description }) => (
 			<ProjectCard url={url} title={title} description={description} />
 		))}
