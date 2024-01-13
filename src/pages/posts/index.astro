@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import BlogCard from "../../components/BlogCard.astro";
 
 const posts = await Astro.glob("./*.md");
 const pageDescription = "this is where I do all of my rambling";
@@ -13,14 +14,7 @@ const noPostsMessage = "nothing posted yet. Stay tuned!";
 	{
 		posts.length > 0 ? 
 			<ul>
-				{
-					posts.map((post) => (
-						<li class="flex justify-between mx-16 text-xl">
-							<a href={post.url}>{ post.frontmatter.title }</a>
-							<p>{ post.frontmatter.pubDate.split("T")[0]}</p>
-						</li>
-					))
-				}
+				{ posts.map((post) => <BlogCard post={post} />) }
 			</ul> :
 			<p class="text-center text-xl">{ noPostsMessage }</p>
 	}

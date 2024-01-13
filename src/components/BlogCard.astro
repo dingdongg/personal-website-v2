@@ -1,0 +1,9 @@
+---
+
+const { post } = Astro.props;
+---
+
+<li class="flex justify-between mx-16 text-xl hover:underline">
+    <a href={post.url}>{ post.frontmatter.title }</a>
+    <p>{ post.frontmatter.pubDate.split("T")[0]}</p>
+</li>
