@@ -1,8 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import ProjectCard from "../components/ProjectCard.astro"
+
+const makeProject = (url: string, title: string, description: string) => {
+	return { url, title, description };
+};
+
+const pageDescription = "stuff that I have built"
+const projects = [
+	makeProject(
+		"https://github.com/rseo0301/lol-esports-ranking-model",
+		"eSports Ranking Model",
+		"Web app that produces a power ranking of the competitive League of Legends teams with machine learning",
+	),
+	makeProject(
+		"https://github.com/dingdongg/pcg-game",
+		"2D roguelike game",
+		"Roguelike game where players aim to reach the deepest dungeon levels",
+	),
+	makeProject(
+		"https://github.com/dingdongg/spotify-payment",
+		"Bill Splitting App",
+		"Full stack web app that allows you to keep track of who owes others money",
+	)
+];
 ---
 
 <Layout title="Donggyu Kim - Projects">
 	<a href="/">Go Back</a>
-	<div>projects page</div>
+	<h1 class="text-center">Projects</h1>
+	<p class="mb-12 text-center text-xl">{ pageDescription }</p>
+	<div class="grid grid-cols-2 grid-rows-3 gap-12 justify-center">
+		{projects.map(({ url, title, description }) => (
+			<ProjectCard url={url} title={title} description={description} />
+		))}
+	</div>
 </Layout>
+
+<style>
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 0.6em;
+	}
+</style>
