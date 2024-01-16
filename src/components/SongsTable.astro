@@ -1,0 +1,18 @@
+---
+import { type Song } from "./CurrentSong.astro";
+
+const baseUrl = import.meta.env.NODE_ENV === "production"
+	? import.meta.env.BASE_URL
+	: "http://localhost:4321/";
+
+const songsListened: Song[] = await fetch(baseUrl + "most_listened").then(data => data.json());
+---
+
+{
+    songsListened.map((song) => (
+        <div>
+            { song.title } by { song.artist }
+            <img src={song.image?.url} width="200" height="200" alt={`${song.title} by ${song.artist}`}>
+        </div>
+    ))
+}
