@@ -3,29 +3,35 @@ import Layout from "../layouts/Layout.astro";
 import CurrentSong from "../components/CurrentSong.astro";
 import SongsTable from "../components/SongsTable.astro";
 
-const introMessage = "Hi! I'm Donggyu. I'm a 4th year CS student at UBC. blahblah";
-const pageDescription = "more info about me here!";
+const introMessage = "I've interned as a fullstack developer, and recently I've been learning more about backend development.";
 ---
 
 <Layout title="Donggyu Kim - About">
 	<a href="/">Go Back</a>
 	<div class="flex flex-col items-center">
 		<h1>About me</h1>
-		<p class="mb-12 text-center text-xl">{ pageDescription }</p>
 		<div class="text-wrap text-xl max-w-[650px] mx-5">
 			<p>{ introMessage }</p>
+			<br />
+			<p>I spend my free time playing games (perhaps a bit too much?) like TFT and League of Legends. Gaming is pretty limited on MacOS, sadly 🥲</p>
+			<br />
 			<p>
-				Also, I like digging up new music to bump
-				<span class="inline-block animate-bounce">ᕕ(⌐■_■)ᕗ ♪♬</span>
+				Also, I like digging up new music to bump! 
 			</p>
 		</div>
+		<br />
+		<br />
 		<br />
 		<span class="text-center text-xl">
 			Right now i'm listening to: 
 			<CurrentSong />
 		</span>
 		<br />
-		<p class="text-xl">Favorite songs as of recently:</p>
+		<p class="text-xl">
+			<span class="hidden lg:inline-block animate-bounce mx-2">ᕕ(⌐■_■)ᕗ ♪♬</span>
+			Songs in rotation
+			<span class="inline-block animate-bounce mx-2">ᕕ(⌐■_■)ᕗ ♪♬</span>
+		</p>
 		<SongsTable />
 	</div>
 </Layout> 
