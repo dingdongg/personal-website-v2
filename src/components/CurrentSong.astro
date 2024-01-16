@@ -20,9 +20,12 @@ const res: Song = await fetch(baseUrl + "current_song").then((data) => data.json
 
 {
     res?.isPlaying ? 
-    <div>
-        Now playing: { res.title } by { res.artist }
-        <img src={res.image?.url} width="200" height="200" alt={`Cover art for ${res.title}`}>
-    </div> :
+    <a href={res.url} class="bg-slate-800 flex items-center p-4 rounded-3xl transition ease-in-out hover:bg-slate-700">
+        <img src={res.image?.url} class="rounded-3xl" width="85" height="85" alt={`${res.title} by ${res.artist}`}>
+        <div class="ml-4 mr-2">
+            <p class="text-2xl underline underline-offset-4 mb-4">{ res.title }</p>
+            <p>{ res.artist }</p>
+        </div>
+    </a> :
     <div>nothing playing rn</div>
 }
