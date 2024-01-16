@@ -1,8 +1,16 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import BlogCard from "../../components/BlogCard.astro";
+import type { MarkdownInstance } from "astro";
 
-const posts = await Astro.glob("./*.md");
+let posts: MarkdownInstance<Record<string, any>>[] = [];
+
+try {
+	posts = await Astro.glob("./*.md");
+} catch (err) {
+	posts = [];
+}
+
 const pageDescription = "this is where I do all of my rambling";
 const noPostsMessage = "...but nothing is posted yet. Stay tuned!";
 ---
