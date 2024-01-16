@@ -20,7 +20,7 @@ const res: Song = await fetch(baseUrl + "current_song").then((data) => data.json
 
 {
     res?.isPlaying ? 
-    <a href={res.url} class="bg-slate-800 text-left flex items-center p-4 rounded-3xl transition ease-in-out hover:bg-slate-700">
+    <a href={res.url} target="_blank" class="bg-slate-800 text-left flex items-center p-4 rounded-3xl transition ease-in-out hover:bg-slate-700">
         <img src={res.image?.url} class="rounded-3xl" width="85" height="85" alt={`${res.title} by ${res.artist}`}>
         <div class="ml-4 mr-2 truncate">
             <p class="text-2xl underline underline-offset-4 mb-4 truncate">{ res.title }</p>
