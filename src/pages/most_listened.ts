@@ -20,8 +20,8 @@ const getAcccessToken = async () => {
 };
 
 export async function GET() {
-    const { access_token } = await getAcccessToken();
 	try {
+		const { access_token } = await getAcccessToken();
 		const response = await fetch("https://api.spotify.com/v1/me/top/tracks?limit=6&time_range=short_term", {
 			headers: {
 				"Authorization": `Bearer ${access_token}`,
@@ -52,5 +52,9 @@ export async function GET() {
         );
 	} catch (err) {
 		console.log("Something went wrong", err);
+		return new Response(null, {
+			status: 400,
+			statusText: "INVALID REQUEST",
+		});
 	}
 }
