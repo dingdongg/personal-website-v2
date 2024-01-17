@@ -5,7 +5,13 @@ const baseUrl = import.meta.env.NODE_ENV === "production"
 	? import.meta.env.BASE_URL
 	: "http://localhost:4321/";
 
-const songsListened: Song[] = await fetch(baseUrl + "most_listened").then(data => data.json());
+const songsListened: Song[] = await fetch(baseUrl + "most_listened")
+    .then(data => data.json())
+    .catch(err => {
+        console.error(err);
+        return [];
+    });
+console.log("songslitened >>", songsListened);
 ---
 
 <ol class="lg:grid gap-4 grid-cols-2 grid-rows-3">
