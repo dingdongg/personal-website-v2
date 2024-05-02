@@ -7,7 +7,7 @@ const tags: string[] = frontmatter.tags;
 ---
 
 <Layout title={frontmatter.title}>
-	<MainPageAnchor />
+	<MainPageAnchor link="/posts" />
 	<h1 class="text-center mb-10">{ frontmatter.title }</h1>
 	<div class="flex mb-5">
 		{tags.map(tag => <PostTag {tag} />)}
