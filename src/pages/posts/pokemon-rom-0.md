@@ -37,3 +37,7 @@ So at the moment, I think this will be a simple CRUD application.
 <br/>
 
 <sup>*</sup> In order to keep the scope of the project within reason, I'll limit myself to just Pokemon Platinum and see how it goes from there. 
+
+<br/>
+
+This will be an ongoing blog series! I'm hoping this will help me see through to the end with this project. Also I think it'll be cool looking back at the progress afterwards.
