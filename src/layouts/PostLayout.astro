@@ -1,13 +1,18 @@
 ---
 import Layout from "./Layout.astro";
 import MainPageAnchor from "../components/MainPageAnchor.astro";
+import PostTag from "../components/PostTag.astro";
 const { frontmatter } = Astro.props;
+const tags: string[] = frontmatter.tags;
 ---
 
 <Layout title={frontmatter.title}>
 	<MainPageAnchor />
 	<h1 class="text-center mb-10">{ frontmatter.title }</h1>
-	<p class="text-right">{ frontmatter.pubDate.split("T")[0] }</p>
+	<div class="flex mb-5">
+		{tags.map(tag => <PostTag {tag} />)}
+	</div>
+	<p class="text-right">{ frontmatter.pubDate.split("T")[0] }</p>	
 	<div class="prose">
 		<slot />
 	</div>
