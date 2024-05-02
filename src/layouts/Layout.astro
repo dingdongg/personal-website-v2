@@ -47,19 +47,46 @@ const { title } = Astro.props;
 	}
 
 	.prose {
-		p {
-			color: red;
-		}
-
-		h3 {
+		h2 {
 			text-align: left;
 			font-size: xx-large;
 			font-weight: 600;
+			margin-bottom: 5px;
+			line-height: 3rem;
 		}
 
+		/* h2, p {
+			color: #f9f7ed;
+		} */
+
+		p {
+			margin-bottom: 25px;
+			line-height: 1.75rem;
+			font-size: 1.25rem;
+		}
+
+		a {
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
 		pre {
 			padding: 20px;
 			border-radius: 10px;
+		}
+
+		blockquote {
+			margin-top: 20px;
+			border-left: 5px solid #85bdd4;
+			padding-left: 15px;
+		}
+
+		ul {
+			list-style-type: disc;
+			padding-left: 2rem;
+
+			li {
+				font-size: 1.25rem;
+			}
 		}
 	}
 </style>
