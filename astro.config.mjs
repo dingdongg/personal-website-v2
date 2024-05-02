@@ -5,7 +5,11 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  integrations: [
+    tailwind({
+      nesting: true,
+    })
+  ],
   output: "server",
   prefetch: {
     defaultStrategy: "load"
