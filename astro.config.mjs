@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
+import { macchiato } from '@catppuccin/vscode';
 
 import netlify from "@astrojs/netlify";
 
@@ -14,5 +15,11 @@ export default defineConfig({
   prefetch: {
     defaultStrategy: "load"
   },
-  adapter: netlify()
+  adapter: netlify(),
+  markdown: {
+    shikiConfig: {
+      theme: macchiato,
+      wrap: true,
+    }
+  }
 });
