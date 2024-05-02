@@ -4,21 +4,12 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-    <a href="/posts">Go Back</a>
-    <h1 class="text-center">{ frontmatter.title }</h1>
-    <p>Written by { frontmatter.author } on { frontmatter.pubDate.split("T")[0] }</p>
-    <slot />
+    <div class="p-5">
+		<a href="/posts">Go Back</a>
+		<h1 class="text-center">{ frontmatter.title }</h1>
+		<p>Written by { frontmatter.author } on { frontmatter.pubDate.split("T")[0] }</p>
+			<div class="prose">
+				<slot />
+			</div>
+	</div>
 </Layout>
-
-<style>
-	:root {
-		color-scheme: dark;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-</style>
