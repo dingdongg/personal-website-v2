@@ -1,1 +1,9 @@
-<div class="mb-5 hover:underline w-max"><a href="/">Go Back</a></div>
+---
+const link: string = Astro.props.link;
+---
+
+<div class="mb-5 hover:underline w-max">
+    <a href={link || "/"}>
+        Go Back
+    </a>
+</div>
