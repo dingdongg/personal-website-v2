@@ -20,7 +20,7 @@ const songsListened: Song[] = await fetch(baseUrl + "most_listened")
                 <a href={song.url} target="_blank" class="flex items-center p-4 rounded-3xl transition ease-in-out hover:bg-slate-700">
                     <img src={song.image?.url} class="rounded-3xl" width="85" height="85" alt={`${song.title} by ${song.artist}`}>
                     <div class="ml-4 mr-2 truncate">
-                        <p class="text-2xl underline underline-offset-4 mb-4 truncate">{ song.title }</p>
+                        <p class="text-2xl underline underline-offset-4 lg:mb-4 mb-2 truncate max-w-[200px]">{ song.title }</p>
                         <p>{ song.artist }</p>
                     </div>
                 </a>
