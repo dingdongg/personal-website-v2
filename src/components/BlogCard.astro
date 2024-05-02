@@ -1,6 +1,7 @@
 ---
+import type { MarkdownInstance } from "astro";
 
-const { post } = Astro.props;
+const post: MarkdownInstance<Record<string, any>> = Astro.props.post;
 ---
 
 <li class="md:mx-16 mx-5 text-2xl hover:underline">
