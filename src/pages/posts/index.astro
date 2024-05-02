@@ -1,12 +1,19 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import BlogCard from "../../components/BlogCard.astro";
+import MainPageAnchor from "../../components/MainPageAnchor.astro"
 import type { MarkdownInstance } from "astro";
 
 let posts: MarkdownInstance<Record<string, any>>[] = [];
 
 try {
 	posts = await Astro.glob("./*.md");
+	posts.sort((a, b) => {
+		const dateA = new Date(a.frontmatter.pubDate);
+		const dateB = new Date(b.frontmatter.pubDate);
+
+		return dateB.getTime() - dateA.getTime();
+	});
 } catch (err) {
 	posts = [];
 }
@@ -16,7 +23,7 @@ const noPostsMessage = "...but nothing is posted yet. Stay tuned!";
 ---
 
 <Layout title="Donggyu Kim - Posts">
-	<a href="/">Go Back</a>
+	<MainPageAnchor />
 	<h1>Posts</h1>
 	<p class="mb-12 text-center text-xl">{ pageDescription }</p>
 	{

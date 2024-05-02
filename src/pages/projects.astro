@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import ProjectCard from "../components/ProjectCard.astro"
+import MainPageAnchor from "../components/MainPageAnchor.astro";
 
 const makeProject = (url: string, title: string, description: string) => {
 	return { url, title, description };
@@ -32,7 +33,7 @@ const projects = [
 ---
 
 <Layout title="Donggyu Kim - Projects">
-	<a href="/">Go Back</a>
+	<MainPageAnchor />
 	<h1 class="text-center">Projects</h1>
 	<p class="mb-12 text-center text-xl">{ pageDescription }</p>
 	<div class="md:grid grid-cols-2 grid-rows-3 gap-8 justify-center flex flex-col">

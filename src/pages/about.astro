@@ -2,12 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import CurrentSong from "../components/CurrentSong.astro";
 import SongsTable from "../components/SongsTable.astro";
+import MainPageAnchor from "../components/MainPageAnchor.astro";
 
 const introMessage = "I've interned as a fullstack developer, and recently I've been learning more about backend development.";
 ---
 
 <Layout title="Donggyu Kim - About">
-	<a href="/">Go Back</a>
+	<MainPageAnchor />
 	<div class="flex flex-col items-center">
 		<h1>About me</h1>
 		<div class="text-wrap text-xl max-w-[650px] mx-5">
