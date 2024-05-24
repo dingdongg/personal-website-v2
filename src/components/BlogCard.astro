@@ -4,9 +4,9 @@ import type { MarkdownInstance } from "astro";
 const post: MarkdownInstance<Record<string, any>> = Astro.props.post;
 ---
 
-<li class="md:mx-16 mx-5 text-2xl hover:underline">
-    <a href={post.url} class="flex flex-col hover:underline md:flex-row w-full md:justify-between">
+<li class="pc:mx-16 mx-5 text-2xl hover:underline">
+    <a href={post.url} class="flex flex-col hover:underline pc:flex-row w-full pc:justify-between">
         { post.frontmatter.title }
-        <p class="inline mb-5 md:mb-2">{ post.frontmatter.pubDate.split("T")[0]}</p>
+        <p class="inline mb-5 pc:mb-2 text-gray-400 text-[20px]">{ post.frontmatter.pubDate.split("T")[0]}</p>
     </a>
 </li>
