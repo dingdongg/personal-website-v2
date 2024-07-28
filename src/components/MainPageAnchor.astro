@@ -1,9 +1,8 @@
 ---
 const link: string = Astro.props.link;
+const text: string = Astro.props.text || "Go Back";
 ---
 
 <div class="mb-5 hover:underline w-max">
-    <a href={link || "/"}>
-        Go Back
-    </a>
+    <a href={link || "/"}>{ text }</a>
 </div>
