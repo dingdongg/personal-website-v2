@@ -21,5 +21,5 @@ export default defineConfig({
       theme: macchiato,
       wrap: true,
     }
-  }
+  },
 });
