@@ -11,4 +11,6 @@ title: Pokemon EV Tracker
 layout: ../../layouts/ProjectLayout.astro
 ---
 
-Markdown starts here!
+<p class="text-center animate-bounce">🚧 <b>DESCRIPTION WORK IN PROGRESS. CHECK BACK LATER</b> 🚧</p>
+
+<p class="text-center">In the meantime, feel free to check out the source code.</p>

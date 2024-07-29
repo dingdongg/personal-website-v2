@@ -9,4 +9,4 @@ title: Tower of Babel
 layout: ../../layouts/ProjectLayout.astro
 ---
 
-Markdown starts here!
+<p class="text-center animate-bounce">🚧 <b>DESCRIPTION WORK IN PROGRESS. CHECK BACK LATER</b> 🚧</p>
