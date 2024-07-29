@@ -1,9 +1,12 @@
 ---
 
-const { url, title, description } = Astro.props;
+const { url, title, description, month, year } = Astro.props;
 ---
 
-<a href={url} class="bg-slate-800 transition ease-in-out p-2 pl-4 rounded-lg hover:bg-slate-700">
-    <h3 class="font-semibold underline underline-offset-8">{ title }</h3>
-    <p class="text-wrap mt-9">{ description }</p>
+<a href={url} class="bg-slate-800 transition ease-in-out p-2 px-4 rounded-lg hover:bg-slate-700">
+    <div class="flex flex-col">
+        <h3 class="font-semibold underline underline-offset-8 mb-3">{ title }</h3>
+        <p class="opacity-75">{ month + " " + year }</p>
+    </div>
+    <p class="text-wrap mt-6 mb-1">{ description }</p>
 </a>
