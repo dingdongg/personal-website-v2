@@ -9,7 +9,7 @@ title: Pokemon Team Draft Manager
 layout: ../../layouts/ProjectLayout.astro
 ---
 
-Table of contents:
+## Table of contents
 - [description](#description)
 - [feature #1 - team management](#team-management)
 - [feature #2 - strength analysis](#team-strength-analysis)
