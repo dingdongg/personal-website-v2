@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Pokemon EV Tracker",
+        "url": "/projects/pokemon-ev-tracker",
+        "pubDate": {
+            "month": 5,
+            "year": 2024
+        },
+        "description": "App that allows you to view hidden stats of pokemons in nintendo DS pokemon games"
+    },
+    {
+        "title": "Tower of Babel",
+        "url": "/projects/tower-of-babel",
+        "pubDate": {
+            "month": 3,
+            "year": 2024
+        },
+        "description": "2D roguelike game where players try to ascend to the highest floors of a tower riddled with enemies"
+    },
+    {
+        "title": "LoL eSports Ranking Model",
+        "url": "/projects/lol-esports-model",
+        "pubDate": {
+            "month": 11,
+            "year": 2023
+        },
+        "description": "Machine learning model that produces a power ranking of the competitive League of Legends teams"
+    },
+    {
+        "title": "SmoFree - Quit Smoking!",
+        "url": "/projects/smofree---quit-smoking!",
+        "pubDate": {
+            "month": 4,
+            "year": 2023
+        },
+        "description": "Mobile app that assists smokers overcome their nicotine addictions"
+    },
+    {
+        "title": "Bill Splitting App",
+        "url": "/projects/bill-splitting-app",
+        "pubDate": {
+            "month": 10,
+            "year": 2022
+        },
+        "description": "Web app that allows you to keep track of who owes others money"
+    },
+    {
+        "title": "Pokemon Team Draft Manager",
+        "url": "/projects/pokemon-team-draft-manager",
+        "pubDate": {
+            "month": 2,
+            "year": 2021
+        },
+        "description": "Desktop app to create and edit pokemon team draft ideas"
+    }
+]

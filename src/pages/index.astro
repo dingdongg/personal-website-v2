@@ -3,53 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import SocialList from '../components/SocialList.astro';
 import ProfileImage from '../components/ProfileImage.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import projects from "../../test.json";
 
 const introMessage = "Hi! I'm Donggyu. I'm in my 4th year as an undergrad CS student :D";
-const recentActivity = "Right now, I'm creating an app that streamlines EV training in generation IV/V Pokemon games.";
 const profileImageSize = 150;
 
-const makeProject = (url: string, title: string, description: string) => {
-	return { url, title, description };
-};
-
-const pageDescription = "stuff that I have built"
-const projects = [
-	makeProject(
-		"https://github.com/rseo0301/lol-esports-ranking-model",
-		"eSports Ranking Model",
-		"Web app that produces a power ranking of the competitive League of Legends teams with machine learning",
-	),
-	makeProject(
-		"https://github.com/dingdongg/pcg-game",
-		"2D roguelike game",
-		"Roguelike game where players aim to reach the deepest dungeon levels",
-	),
-	makeProject(
-		"https://github.com/dingdongg/spotify-payment",
-		"Bill Splitting App",
-		"Full stack web app that allows you to keep track of who owes others money",
-	),
-	makeProject(
-		"https://github.com/dingdongg/personal-website-v2",
-		"This website!",
-		":D",
-	),
-	makeProject(
-		"https://github.com/dingdongg/ev-tracker",
-		"Pokemon EV Tracker",
-		"App that allows you to view hidden stats of pokemons in nintendo pokemon games",
-	),
-	makeProject(
-		"http://localhost:4321/projects-v2/test",
-		"testing 123",
-		"test description",
-	),
-	makeProject(
-		"http://localhost:4321/projects-v2/test-false",
-		"testing - no link",
-		"test description",
-	)
-];
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 ---
 
 <Layout title="Donggyu Kim">
@@ -61,17 +20,17 @@ const projects = [
 		<SocialList />
 		<br />
 		<div class="text-wrap text-xl mx-5">
-			<p>{ introMessage }</p>
+			<p class="text-center">{ introMessage }</p>
 			<br/>
-			<p id="projects-anchor">I like creating full-stack apps to enhance my QoL. Check them out below!</p>
+			<p id="projects-anchor" class="text-center">I like creating full-stack apps to enhance my QoL. Check them out below!</p>
 
 			<br>
 			<br>
 			<!-- <h1 class="text-center">Projects</h1> -->
 			<!-- <p class="mb-12 text-center text-xl">{ pageDescription }</p> -->
 			<div class="pc:grid grid-cols-2 grid-rows-3 gap-8 justify-center flex flex-col">
-				{projects.map(({ url, title, description }) => (
-					<ProjectCard url={url} title={title} description={description} />
+				{projects.map(({ url, title, description, pubDate }) => (
+					<ProjectCard url={url} title={title} description={description} month={months[pubDate.month - 1]} year={pubDate.year} />
 				))}
 			</div>
 			<br />
