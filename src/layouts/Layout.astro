@@ -21,6 +21,42 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{ title }</title>
 	</head>
+	<script>
+		if ("scrollRestoration" in history) {
+			document.addEventListener("astro:before-preparation", (event) => {
+				// only cache the scroll position if we are navigating AWAY from "/"
+				// and TO a page under "/projects/*"
+				// @ts-ignore
+				if (event.from.pathname === "/" && event.to.pathname.includes("/projects/")) {
+					sessionStorage.setItem("scrollPosition", JSON.stringify(window.scrollY));
+				}
+			});
+
+			document.addEventListener("astro:before-swap", (event) => {
+				// @ts-ignore
+				const shouldRestore = event.from.pathname.includes("/projects/") && event.to.pathname === "/";
+				// @ts-ignore
+				const shouldPreserve = event.from.pathname === "/" && event.to.pathname.includes("/projects/");
+				if (!shouldRestore && !shouldPreserve) {
+					sessionStorage.removeItem("scrollPosition");
+				}
+			})
+
+			document.addEventListener("astro:after-swap", (event) => {
+				// only restore scroll position if we are navigating AWAY from "/projects/*"
+				// and TO the root page "/"
+				const scrollPos = sessionStorage.getItem("scrollPosition");
+				if (scrollPos && location.pathname === "/") {
+					window.scrollTo(0, JSON.parse(scrollPos));
+					sessionStorage.removeItem("scrollPosition");
+				}
+
+				history.scrollRestoration = "auto";
+			});
+		}
+
+		history.scrollRestoration = "auto";
+	</script>
 	<body class="bg-slate-900 text-white pc:w-[60%] w-[90%] left-[5%] pc:left-[20%] relative">
 		<Header />
 		<br />
