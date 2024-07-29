@@ -1,8 +1,8 @@
 ---
 techStack:
-- react_native,
-- typescript,
-- expo,
+- react_native
+- typescript
+- expo
 - clerk
 pubDate: 2023-04-01
 repoUrl: https://github.com/dingdongg/produhacks-2023
