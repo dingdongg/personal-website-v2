@@ -94,7 +94,7 @@ To my surprise, the encryption mechanism used is pretty straightforward. One cru
 
 The PRNG used consists a linear congruential generator, which is a recursive formula that computes pseudorandom numbers based on its previous results. This is the formula used for our case:
 
-![PRNG algo screenshot](../../images/day3-prng-algo.png)
+![PRNG algo screenshot](../../images/posts/day3-prng-algo.png)
 
 The key (checksum) is used to seed the PRNG (ie. set its base case), and every subsequent output (the upper 16 bits, to be specific) of this equation is XORed with every 2-byte word in the appropriate address range. For the first party pokemon, these are bytes from offset `0x08` to `0x87`.
 

@@ -138,7 +138,7 @@ func main() {
 
 I didn't do that much for frontend. I whipped up a very basic UI to allow users to increment their EVs for any stat by 1/2/3 (the only possible base values in pokemon games). It looks scuffed but it gets the job done!! 
 
-![frontend screenshot](../../images/day1-frontend.png)
+![frontend screenshot](../../images/posts/day1-frontend.png)
 
 The "save to database" button is mocked for now, since I don't have an endpoint to accept incoming EV changes.
 

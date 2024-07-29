@@ -67,7 +67,7 @@ First, I added an "undo" button, which will roll back the latest EV changes in c
 
 More importantly, I added a search bar to look up pokemons, calculate their EV yield, and increment this automatically. This change makes EV training with wild pokemon much, much less annoying!
 
-![frontend screenshot](../../images/day2-frontend.png)
+![frontend screenshot](../../images/posts/day2-frontend.png)
 
 Based on user input, I make calls to [PokeAPI](https://pokeapi.co/) to figure out the EV yield of pokemons. Results are then cached on the client's browser via LocalStorage so that I'm not spraying PokeAPI with redundant requests.
 

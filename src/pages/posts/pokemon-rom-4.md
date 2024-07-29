@@ -131,13 +131,13 @@ I then copy the file contents into a new buffer, and call `ROMparser.Parse()` wi
 ## Figma mockups
 Now that all of my backend changes were complete, I started thinking about how to best present this information on the frontend. I created a new Figma project to do this, and after a few iterations this was my final mockup:
 
-![figma mockup](../../images/day4-figma.png)
+![figma mockup](../../images/posts/day4-figma.png)
 
 The page on the left would be my landing page. Once the user selects and submits their savefile, it would render a page with information about their party pokemon (the page on the right). On this page, users also have the option to upload different files to view.
 
 The page on the right displays detailed information about each pokemon in party. Most importantly, it highlights the pokemons' EVs in parentheses in the stats section.
 
-![pokemon component](../../images/day4-figma-pokemon.png)
+![pokemon component](../../images/posts/day4-figma-pokemon.png)
 
 Since this app's main purpose is to track EVs, I wanted the EVs to be one of the first things to catch the users' eyes. The use of colors helped me achieve that! In this screenshot, your eyes were (hopefully) drawn to the blue EV values as opposed to the ones colored in grey. Through this, users can focus on the stats that have accumulated relatively more EVs.
 
@@ -211,7 +211,7 @@ I do some conditional rendering based on the results I get back from the form ac
 
 Here is the final result!
 
-![frontend screenshot](../../images/day4-frontend.png)
+![frontend screenshot](../../images/posts/day4-frontend.png)
 
 I added more color mappings based on the EV values. In decreasing order of EVs, the color sequence is: blue -> green -> yellow -> orange -> grey. Also, the ability/held item names are going to be mocked out until I port over a mapping from their ID to names.
 
