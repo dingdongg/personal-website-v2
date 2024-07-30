@@ -36,13 +36,13 @@
         "description": "Mobile app that assists smokers overcome their nicotine addictions"
     },
     {
-        "title": "Bill Splitting App",
-        "url": "/projects/bill-splitting-app",
+        "title": "PDF Merger",
+        "url": "/projects/pdf-merger",
         "pubDate": {
-            "month": 10,
+            "month": 7,
             "year": 2022
         },
-        "description": "Web app that allows you to keep track of who owes others money"
+        "description": "Merge your PDFs into one file on your local machine"
     },
     {
         "title": "Pokemon Team Draft Manager",
